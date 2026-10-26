@@ -1,0 +1,26 @@
+{
+  "name": "fico-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SAP OneERP FICO (Financial Accounting & Controlling) Platform",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview",
+    "lint": "npm --prefix frontend run lint",
+    "frontend": "npm --prefix frontend run dev",
+    "backend": "python -m uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload",
+    "test:backend": "python -m pytest backend/test_api.py -v",
+    "test": "npm run test:backend"
+  },
+  "keywords": [
+    "sap",
+    "oneerp",
+    "fico",
+    "fastapi",
+    "react",
+    "mysql"
+  ],
+  "author": "SAP OneERP Engineering",
+  "license": "MIT"
+}
